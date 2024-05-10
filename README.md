@@ -30,7 +30,8 @@ Once the application is running, navigate to the provided local URL (usually htt
 
 ### SMS Classification Function
 Here is how the SMS classification model is set up:
-```from sklearn.pipeline import Pipeline
+```
+from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
 
@@ -44,7 +45,7 @@ def sms_classification(sms_text_df):
     return text_clf
 ```
 
-###Predicting with the Model  
+### Predicting with the Model  
 Using the trained model to predict whether a message is spam:
 ```
 def sms_prediction(text):
@@ -52,5 +53,5 @@ def sms_prediction(text):
     return 'The text message: "{}", is not spam.'.format(text) if prediction == 'ham' else 'The text message: "{}", is spam.'.format(text)
 ```
 
-##Acknowledgments
+## Acknowledgments
 Thanks to EdX for the dataset and starter code.
